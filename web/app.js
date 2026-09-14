@@ -2042,7 +2042,7 @@
       else
         return;
     }
-    if (S2.blame) {
+    if (S2.blame && S2.meta?.git) {
       clearTimeout(hoverTimer);
       hoverTimer = setTimeout(() => blameHoverAt(x, y), HOVER_DELAY);
       return;
